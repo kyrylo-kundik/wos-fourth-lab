@@ -1,0 +1,5 @@
+<div class="post-container" id="post_container">
+    <% data.forEach(function (item) { %>
+        <%- include('components/post', {post: item}); %>
+    <% }) %>
+</div>

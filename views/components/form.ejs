@@ -1,0 +1,16 @@
+<form action="/admin" method="post">
+    <h2>Create new post!</h2>
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Enter post title" required>
+    </div>
+    <div class="form-group">
+        <label for="author">Author:</label>
+        <input type="text" class="form-control" id="author" placeholder="Enter author nickname" name="author" required>
+    </div>
+    <div class="form-group">
+        <label for="text">Post text:</label>
+        <textarea class="form-control" rows="10" id="text" name="text" placeholder="Enter post text" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

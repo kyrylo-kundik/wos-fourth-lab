@@ -1,0 +1,40 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.post-container {
+    width: 100%;
+}
+
+.post-container .post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px 5px 15px;
+    border-bottom: 1px solid darkgray;
+    margin-bottom: 20px;
+}
+
+.post-container .post:hover {
+    background-color: rgba(240, 240, 240, 0.68);
+}
+
+.post-container .post .text-handler {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-container .post i {
+    font-size: 10px;
+}
+
+textarea {
+    resize: none;
+}
