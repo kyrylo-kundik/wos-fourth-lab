@@ -8,11 +8,11 @@ router.get('/', function (req, res, next) {
 
 	db.any('SELECT * FROM post;')
 		.then(data => {
-			return res.render('index', {title: 'Blog', data: data})
+			return res.send({success: true, data: data})
 		})
 		.catch(err => {
 			console.error(err);
-			return res.render('error', {message: 'DB error occurred on server side', error: err})
+			return res.send({success: false, error: err})
 		})
 
 });
@@ -26,9 +26,9 @@ router.post('/updates', function (req, res) {
 		.then(data => {
 			if (data.length > 0) {
 				console.log('Updates called with last id: ' + lastPostId);
-				return res.send({data: data})
+				return res.send({success: true, data: data})
 			} else
-				return res.send({nothing: true})
+				return res.send({success: false})
 		})
 		.catch(err => {
 			console.error(err);
